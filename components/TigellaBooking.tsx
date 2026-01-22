@@ -29,30 +29,30 @@ const TigellaBooking: React.FC = () => {
                 opacity: 0,
                 transition: { duration: 0.4, ease: "easeInOut" }
               }}
-              className="absolute right-0 md:right-12 top-0 bottom-0 bg-white border-2 border-sfoglia-pink/30 rounded-2xl md:rounded-l-3xl md:rounded-r-none shadow-soft-xl overflow-hidden flex origin-right"
-              style={{ marginRight: '40px' }}
+              className="absolute right-4 md:right-12 top-0 bottom-0 bg-white border-2 border-sfoglia-pink/30 rounded-2xl md:rounded-l-3xl md:rounded-r-none shadow-soft-xl overflow-hidden flex origin-right"
+              style={{ marginRight: '36px' }}
             >
                <m.div 
                  initial={{ opacity: 0, x: -20 }}
                  animate={{ opacity: 1, x: 0 }}
                  transition={{ delay: 0.3 }}
-                 className="flex-1 flex flex-col md:flex-row items-center justify-between px-4 md:px-10 min-w-[280px] md:min-w-[700px] py-4 md:py-0"
+                 className="flex-1 flex flex-col md:flex-row items-center justify-between px-3 md:px-10 min-w-[240px] xs:min-w-[280px] md:min-w-[700px] py-3 md:py-0"
                >
-                 <div className="flex flex-col shrink-0 items-center md:items-start mb-4 md:mb-0">
-                   <h3 className="font-display text-lg md:text-xl font-bold text-sfoglia-wood leading-none">Prenota Online</h3>
-                   <p className="text-[10px] md:text-sm text-sfoglia-accent font-bold uppercase tracking-tighter mt-1">Sfoglia Stella Bologna</p>
+                 <div className="flex flex-col shrink-0 items-center md:items-start mb-3 md:mb-0">
+                   <h3 className="font-display text-base md:text-xl font-bold text-sfoglia-wood leading-none">Prenota Online</h3>
+                   <p className="text-[9px] md:text-sm text-sfoglia-accent font-bold uppercase tracking-tighter mt-1">Sfoglia Stella Bologna</p>
                  </div>
 
-                 <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3">
+                 <div className="flex flex-wrap items-center justify-center gap-1.5 md:gap-3">
                     {/* TheFork Link */}
                     <a 
                       href={CONTACT_INFO.theFork} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-3 md:px-4 py-2 rounded-full bg-[#00645A] text-white hover:scale-105 active:scale-95 transition-all shadow-soft"
+                      className="flex items-center gap-1.5 md:gap-2 px-2.5 md:px-4 py-1.5 md:py-2 rounded-full bg-[#00645A] text-white hover:scale-105 active:scale-95 transition-all shadow-soft"
                     >
-                      <UtensilsCrossed size={14} className="md:w-4 md:h-4" />
-                      <span className="font-sans text-[10px] md:text-xs font-bold">TheFork</span>
+                      <UtensilsCrossed size={12} className="md:w-4 md:h-4" />
+                      <span className="font-sans text-[9px] md:text-xs font-bold">TheFork</span>
                     </a>
 
                     {/* Google Reserve Link */}
@@ -60,10 +60,10 @@ const TigellaBooking: React.FC = () => {
                       href={CONTACT_INFO.googleReserve} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-3 md:px-4 py-2 rounded-full bg-white border border-sfoglia-wood/20 text-sfoglia-wood hover:bg-sfoglia-wood hover:text-white active:scale-95 transition-all shadow-soft"
+                      className="flex items-center gap-1.5 md:gap-2 px-2.5 md:px-4 py-1.5 md:py-2 rounded-full bg-white border border-sfoglia-wood/20 text-sfoglia-wood hover:bg-sfoglia-wood hover:text-white active:scale-95 transition-all shadow-soft"
                     >
-                      <Globe size={14} className="md:w-4 md:h-4" />
-                      <span className="font-sans text-[10px] md:text-xs font-bold">Google</span>
+                      <Globe size={12} className="md:w-4 md:h-4" />
+                      <span className="font-sans text-[9px] md:text-xs font-bold">Google</span>
                     </a>
 
                     <div className="hidden md:block h-8 w-[1px] bg-sfoglia-pink/30 mx-1"></div>
@@ -73,18 +73,18 @@ const TigellaBooking: React.FC = () => {
                       href={`https://wa.me/39${CONTACT_INFO.whatsapp.replace(/\s/g, '')}`} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-[#25D366] text-white flex items-center justify-center hover:scale-110 active:scale-95 transition-all shadow-soft"
+                      className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-[#25D366] text-white flex items-center justify-center hover:scale-110 active:scale-95 transition-all shadow-soft"
                     >
-                      <MessageCircle size={18} className="md:w-5 md:h-5" />
+                      <MessageCircle size={16} className="md:w-5 md:h-5" />
                     </a>
 
                     {/* Phone Call */}
                     <a 
                       href={`tel:+39${CONTACT_INFO.phone.replace(/\s/g, '')}`} 
-                      className="flex items-center gap-2 px-3 md:px-4 py-2 rounded-full bg-sfoglia-wood text-white hover:bg-sfoglia-accent active:scale-95 transition-all shadow-soft"
+                      className="flex items-center gap-1.5 md:gap-2 px-2.5 md:px-4 py-1.5 md:py-2 rounded-full bg-sfoglia-wood text-white hover:bg-sfoglia-accent active:scale-95 transition-all shadow-soft"
                     >
-                      <Phone size={14} className="md:w-4 md:h-4" />
-                      <span className="font-sans text-[10px] md:text-xs font-bold">{CONTACT_INFO.phone}</span>
+                      <Phone size={12} className="md:w-4 md:h-4" />
+                      <span className="font-sans text-[9px] md:text-xs font-bold">Chiama</span>
                     </a>
                  </div>
                </m.div>
