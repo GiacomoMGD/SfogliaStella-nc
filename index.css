@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Soft Scrollbar for Flat Illustration Style */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FEFCF7;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #F8BBD9 0%, #E1BEE7 100%);
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #E1BEE7 0%, #F8BBD9 100%);
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Soft text shadows */
+.text-shadow-soft {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Soft glow effects for flat illustration */
+.glow-soft {
+  box-shadow: 0 0 40px rgba(248, 187, 217, 0.15);
+}
+
+/* Flat illustration style cards */
+.card-flat {
+  background: linear-gradient(135deg, rgba(254, 252, 247, 0.98) 0%, rgba(248, 187, 217, 0.02) 100%);
+  border-radius: 24px;
+  border: 2px solid rgba(248, 187, 217, 0.15);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+}
+
+/* Soft background patterns for flat illustration */
+.flat-bg {
+  background-image:
+    radial-gradient(circle at 20% 80%, rgba(248, 187, 217, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(179, 229, 252, 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(200, 230, 201, 0.05) 0%, transparent 50%);
+}
+
+/* Soft button effects */
+.btn-soft {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid #FFE66D;
+  border-radius: 1.5rem;
+}
+
+.btn-soft:hover {
+  background: #FFE66D;
+  color: #8B7355;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 230, 109, 0.3);
+}
+
+/* Soft overlay effects for flat design */
+.overlay-soft::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(248, 187, 217, 0.02) 0%, rgba(200, 230, 201, 0.02) 100%);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* Illustration style elements */
+.illustration-element {
+  position: relative;
+}
+
+.illustration-element::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, rgba(248, 187, 217, 0.08), rgba(179, 229, 252, 0.06));
+  filter: blur(15px);
+  z-index: -1;
+}
+
+/* Rounded elements for flat style */
+.rounded-flat {
+  border-radius: 20px;
+}
+
+.rounded-flat-xl {
+  border-radius: 32px;
+}
+
+/* Enhanced text readability */
+.text-readable {
+  color: #5D4037;
+  opacity: 0.95;
+  line-height: 1.6;
+}
+
+.text-readable-strong {
+  color: #3E2723;
+  font-weight: 700;
+}
+
+/* Improved contrast for headings */
+.heading-enhanced {
+  color: #3E2723;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.rounded-softer {
+  border-radius: 2rem;
+}
+
