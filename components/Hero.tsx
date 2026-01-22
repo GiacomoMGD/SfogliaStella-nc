@@ -37,7 +37,7 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          className="font-display text-6xl md:text-8xl lg:text-9xl text-sfoglia-wood font-black leading-tight mb-8 tracking-tight drop-shadow-soft"
+          className="font-display text-5xl md:text-8xl lg:text-9xl text-sfoglia-wood font-black leading-[1.1] mb-8 tracking-tight drop-shadow-soft"
         >
           {HERO_TEXT.headline}
         </m.h1>
@@ -46,14 +46,14 @@ const Hero: React.FC = () => {
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className="h-1 w-32 bg-sfoglia-accent mb-8 rounded-full"
+          className="h-1 w-24 md:w-32 bg-sfoglia-accent mb-8 rounded-full"
         />
 
         <m.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.7 }}
-          className="font-sans text-sfoglia-wood text-xl md:text-2xl font-bold max-w-3xl leading-relaxed"
+          className="font-sans text-sfoglia-wood text-lg md:text-2xl font-bold max-w-3xl leading-relaxed"
         >
           {HERO_TEXT.subheadline}
         </m.p>
@@ -62,12 +62,12 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1 }}
-          className="mt-12 flex flex-col sm:flex-row gap-4"
+          className="mt-10 md:mt-12 flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
         >
-          <a href="#prodotto" className="px-10 py-4 bg-sfoglia-wood text-white rounded-full font-bold text-lg hover:bg-sfoglia-accent hover:scale-105 transition-all shadow-soft">
+          <a href="#prodotto" className="px-8 md:px-10 py-4 bg-sfoglia-wood text-white rounded-full font-bold text-lg hover:bg-sfoglia-accent hover:scale-105 active:scale-95 transition-all shadow-soft text-center">
             Scopri le Specialità
           </a>
-          <a href="#bistrot" className="px-10 py-4 bg-white text-sfoglia-wood border-2 border-sfoglia-wood/10 rounded-full font-bold text-lg hover:border-sfoglia-accent hover:text-sfoglia-accent transition-all">
+          <a href="#bistrot" className="px-8 md:px-10 py-4 bg-white/80 backdrop-blur-sm text-sfoglia-wood border-2 border-sfoglia-wood/10 rounded-full font-bold text-lg hover:border-sfoglia-accent hover:text-sfoglia-accent active:scale-95 transition-all text-center">
             Il nostro Bistrot
           </a>
         </m.div>

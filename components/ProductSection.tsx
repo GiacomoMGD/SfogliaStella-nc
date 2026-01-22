@@ -82,52 +82,58 @@ const ProductSection: React.FC = () => {
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              className="bg-sfoglia-cream w-full max-w-4xl rounded-[3rem] shadow-soft-xl relative z-10 overflow-hidden border-4 border-sfoglia-pink/30 flex flex-col md:flex-row"
+              className="bg-sfoglia-cream w-full max-w-4xl rounded-[2rem] md:rounded-[3rem] shadow-soft-xl relative z-10 overflow-hidden border-4 border-sfoglia-pink/30 flex flex-col md:flex-row max-h-[90vh] md:max-h-none overflow-y-auto md:overflow-visible"
             >
-              <div className="w-full md:w-1/2 aspect-square md:aspect-auto">
+              <div className="w-full md:w-1/2 aspect-[4/3] md:aspect-auto sticky top-0 md:relative z-20">
                 <img 
                   src={selectedProduct.image} 
                   alt={selectedProduct.name} 
                   className="w-full h-full object-cover"
                 />
-              </div>
-              
-              <div className="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center relative">
                 <button 
                   onClick={() => setSelectedProduct(null)}
-                  className="absolute top-6 right-6 text-sfoglia-wood/30 hover:text-sfoglia-accent transition-colors"
+                  className="absolute top-4 right-4 md:hidden bg-white/80 backdrop-blur-md text-sfoglia-wood p-2 rounded-full shadow-lg"
+                >
+                  <X size={24} />
+                </button>
+              </div>
+              
+              <div className="w-full md:w-1/2 p-6 md:p-12 flex flex-col justify-center relative">
+                <button 
+                  onClick={() => setSelectedProduct(null)}
+                  className="hidden md:block absolute top-6 right-6 text-sfoglia-wood/30 hover:text-sfoglia-accent transition-colors"
                 >
                   <X size={32} />
                 </button>
 
-                <div className="inline-block px-4 py-1.5 rounded-full bg-sfoglia-pink/20 text-sfoglia-accent text-xs font-bold uppercase tracking-widest mb-6 w-fit">
+                <div className="inline-block px-4 py-1.5 rounded-full bg-sfoglia-pink/20 text-sfoglia-accent text-[10px] md:text-xs font-bold uppercase tracking-widest mb-4 md:mb-6 w-fit">
                   {selectedProduct.tag}
                 </div>
 
-                <h3 className="font-display text-4xl md:text-5xl font-bold text-sfoglia-wood mb-6">
+                <h3 className="font-display text-3xl md:text-5xl font-bold text-sfoglia-wood mb-4 md:mb-6">
                   {selectedProduct.name}
                 </h3>
 
-                <div className="h-1 w-20 bg-sfoglia-accent mb-8 rounded-full"></div>
+                <div className="h-1 w-16 md:w-20 bg-sfoglia-accent mb-6 md:mb-8 rounded-full"></div>
 
-                <p className="font-sans text-xl text-sfoglia-wood/80 leading-relaxed mb-8 font-medium">
+                <p className="font-sans text-lg md:text-xl text-sfoglia-wood/80 leading-relaxed mb-6 md:mb-8 font-medium">
                   {selectedProduct.description}
                 </p>
 
-                <div className="space-y-4">
+                <div className="space-y-3 md:space-y-4">
                    <div className="flex items-center gap-3 text-sfoglia-wood/60">
                      <span className="w-2 h-2 bg-sfoglia-accent rounded-full"></span>
-                     <span className="font-bold">Ingredienti 100% Emiliani</span>
+                     <span className="font-bold text-sm md:text-base">Ingredienti 100% Emiliani</span>
                    </div>
                    <div className="flex items-center gap-3 text-sfoglia-wood/60">
                      <span className="w-2 h-2 bg-sfoglia-accent rounded-full"></span>
-                     <span className="font-bold">Lavorazione a mano oggi</span>
+                     <span className="font-bold text-sm md:text-base">Lavorazione a mano oggi</span>
                    </div>
                 </div>
 
                 <button 
                   onClick={() => setSelectedProduct(null)}
-                  className="mt-10 bg-sfoglia-wood text-white py-4 px-8 rounded-2xl font-display font-bold text-lg hover:bg-sfoglia-accent transition-all w-fit"
+                  className="mt-8 md:mt-10 bg-sfoglia-wood text-white py-4 px-8 rounded-2xl font-display font-bold text-lg hover:bg-sfoglia-accent active:scale-95 transition-all w-full md:w-fit"
                 >
                   CHIUDI DETTAGLI
                 </button>

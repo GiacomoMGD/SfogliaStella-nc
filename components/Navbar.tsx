@@ -64,44 +64,56 @@ const Navbar: React.FC = () => {
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
-            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed inset-0 bg-sfoglia-cream z-[70] md:hidden flex flex-col items-center justify-center p-8"
+            transition={{ type: 'spring', damping: 30, stiffness: 300 }}
+            className="fixed inset-0 bg-sfoglia-cream z-[70] md:hidden flex flex-col p-6"
           >
-            <button 
-              onClick={() => setIsOpen(false)}
-              className="absolute top-6 right-6 text-sfoglia-wood p-2"
-            >
-              <X size={32} />
-            </button>
-            
-            <div className="flex flex-col items-center space-y-10">
-              <div className="font-display text-4xl font-bold mb-4">
+            <div className="flex justify-between items-center mb-12">
+              <div className="font-display text-2xl font-bold">
                 Sfoglia<span className="text-sfoglia-accent">Stella</span>
               </div>
-              
+              <button 
+                onClick={() => setIsOpen(false)}
+                className="text-sfoglia-wood p-2 hover:bg-sfoglia-pink/20 rounded-full transition-colors"
+              >
+                <X size={32} />
+              </button>
+            </div>
+            
+            <div className="flex flex-col space-y-6">
               {NAV_ITEMS.map((item, idx) => (
                 <m.a
                   key={item.label}
                   href={item.href}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: idx * 0.1 }}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: idx * 0.05 }}
                   onClick={() => setIsOpen(false)}
-                  className="font-display text-3xl font-medium text-sfoglia-wood hover:text-sfoglia-accent transition-colors"
+                  className="font-display text-4xl font-bold text-sfoglia-wood hover:text-sfoglia-accent transition-colors py-2 border-b border-sfoglia-wood/5"
                 >
                   {item.label}
                 </m.a>
               ))}
               
-              <m.a 
-                href={`tel:${CONTACT_INFO.phone.replace(/\s/g, '')}`}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.5 }}
-                className="mt-8 bg-sfoglia-accent text-white px-10 py-4 rounded-full text-xl font-bold shadow-soft"
+              <m.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                className="pt-8"
               >
-                CHIAMA ORA
-              </m.a>
+                <a 
+                  href={`tel:${CONTACT_INFO.phone.replace(/\s/g, '')}`}
+                  className="flex items-center justify-center gap-3 bg-sfoglia-accent text-white w-full py-5 rounded-2xl text-xl font-bold shadow-soft active:scale-95 transition-all"
+                >
+                  <Phone size={24} />
+                  CHIAMA ORA
+                </a>
+              </m.div>
+            </div>
+
+            <div className="mt-auto pt-10 text-center">
+              <p className="text-sfoglia-wood/40 font-sans text-sm font-medium uppercase tracking-widest">
+                Bologna • Via Maria Callas 4/A
+              </p>
             </div>
           </m.div>
         )}

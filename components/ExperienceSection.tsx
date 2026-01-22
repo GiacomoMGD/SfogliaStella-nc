@@ -43,8 +43,8 @@ const ExperienceSection: React.FC = () => {
           </div>
 
           <div className="order-1 lg:order-2 grid grid-cols-2 gap-4">
-             <img src="/images/experience/img_pasta_fresca.png" alt="Interior Sfoglia Stella" className="rounded-lg w-full h-full object-cover translate-y-8 shadow-xl" loading="lazy" />
-             <img src="/images/experience/img_tigelle.png" alt="Piatti tradizionali emiliani" className="rounded-lg w-full h-full object-cover -translate-y-8 shadow-xl" loading="lazy" />
+             <img src="/images/experience/img_pasta_fresca.png" alt="Interior Sfoglia Stella" className="rounded-lg w-full h-full object-cover translate-y-4 md:translate-y-8 shadow-xl" loading="lazy" />
+             <img src="/images/experience/img_tigelle.png" alt="Piatti tradizionali emiliani" className="rounded-lg w-full h-full object-cover -translate-y-4 md:-translate-y-8 shadow-xl" loading="lazy" />
           </div>
         </div>
       </div>

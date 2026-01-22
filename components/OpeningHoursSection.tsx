@@ -21,51 +21,51 @@ const OpeningHoursSection: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start">
           {/* Opening Hours */}
           <m.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="space-y-8"
+            className="space-y-6 md:space-y-8"
           >
-            <div className="card-flat p-8 bg-white/5 border-white/10 backdrop-blur-md">
+            <div className="card-flat p-6 md:p-8 bg-white/5 border-white/10 backdrop-blur-md rounded-2xl md:rounded-3xl">
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 bg-sfoglia-yellow rounded-full flex items-center justify-center">
-                  <Clock className="text-sfoglia-wood" size={24} />
+                <div className="w-10 h-10 md:w-12 md:h-12 bg-sfoglia-yellow rounded-full flex items-center justify-center shrink-0">
+                  <Clock className="text-sfoglia-wood w-5 h-5 md:w-6 md:h-6" size={24} />
                 </div>
-                <h3 className="font-display text-2xl font-bold">Orari Cucina</h3>
+                <h3 className="font-display text-xl md:text-2xl font-bold">Orari Cucina</h3>
               </div>
 
               <div className="space-y-2 font-sans">
                 {OPENING_HOURS.kitchen.map((item, idx) => (
                   <div key={idx} className="flex justify-between items-center py-3 border-b border-white/20 last:border-0">
-                    <span className="font-bold text-white">{item.day}</span>
+                    <span className="font-bold text-white text-sm md:text-base">{item.day}</span>
                     <div className="text-right">
-                      <div className="text-white font-bold">{item.hours}</div>
-                      {item.extra && <div className="text-sfoglia-yellow font-bold text-sm">{item.extra}</div>}
+                      <div className="text-white font-bold text-sm md:text-base">{item.hours}</div>
+                      {item.extra && <div className="text-sfoglia-yellow font-bold text-[10px] md:text-sm">{item.extra}</div>}
                     </div>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="card-flat p-8 bg-white/5 border-white/10 backdrop-blur-md">
+            <div className="card-flat p-6 md:p-8 bg-white/5 border-white/10 backdrop-blur-md rounded-2xl md:rounded-3xl">
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 bg-sfoglia-accent rounded-full flex items-center justify-center">
-                  <MapPin className="text-sfoglia-wood" size={24} />
+                <div className="w-10 h-10 md:w-12 md:h-12 bg-sfoglia-accent rounded-full flex items-center justify-center shrink-0">
+                  <MapPin className="text-sfoglia-wood w-5 h-5 md:w-6 md:h-6" size={24} />
                 </div>
-                <h3 className="font-display text-2xl font-bold">Vendita Pasta Fresca</h3>
+                <h3 className="font-display text-xl md:text-2xl font-bold">Vendita Pasta Fresca</h3>
               </div>
 
               <div className="space-y-2 font-sans">
                 {OPENING_HOURS.shop.map((item, idx) => (
                   <div key={idx} className="flex justify-between items-center py-3 border-b border-white/10 last:border-0">
-                    <span className="font-medium">{item.day}</span>
+                    <span className="font-medium text-sm md:text-base">{item.day}</span>
                     <div className="text-right">
-                      <div className="text-white/90">{item.hours}</div>
-                      {item.extra && <div className="text-white/60 text-sm">{item.extra}</div>}
+                      <div className="text-white/90 text-sm md:text-base">{item.hours}</div>
+                      {item.extra && <div className="text-white/60 text-[10px] md:text-sm">{item.extra}</div>}
                     </div>
                   </div>
                 ))}
@@ -81,53 +81,53 @@ const OpeningHoursSection: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="space-y-6"
           >
-            <div className="card-flat p-8 bg-white/5 border-white/10 backdrop-blur-md">
+            <div className="card-flat p-6 md:p-8 bg-white/5 border-white/10 backdrop-blur-md rounded-2xl md:rounded-3xl">
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 bg-sfoglia-yellow rounded-full flex items-center justify-center">
-                  <Truck className="text-sfoglia-wood" size={24} />
+                <div className="w-10 h-10 md:w-12 md:h-12 bg-sfoglia-yellow rounded-full flex items-center justify-center shrink-0">
+                  <Truck className="text-sfoglia-wood w-5 h-5 md:w-6 md:h-6" size={24} />
                 </div>
                 <div>
-                  <h3 className="font-display text-xl font-bold">Consegna a Domicilio</h3>
-                  <p className="text-sm text-white/60">Servizio Deliveroo</p>
+                  <h3 className="font-display text-lg md:text-xl font-bold">Consegna a Domicilio</h3>
+                  <p className="text-[10px] md:text-sm text-white/60">Servizio Deliveroo</p>
                 </div>
               </div>
-              <p className="font-sans text-white/80 mb-4">
+              <p className="font-sans text-white/80 mb-4 text-sm md:text-base">
                 Ricevi i nostri piatti caldi o la pasta fresca da cucinare direttamente a casa tua.
               </p>
               <a 
                 href={CONTACT_INFO.deliveroo} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-block px-6 py-2 bg-sfoglia-yellow text-sfoglia-wood rounded-full font-bold hover:scale-105 transition-transform"
+                className="inline-block px-6 py-2 bg-sfoglia-yellow text-sfoglia-wood rounded-full font-bold hover:scale-105 active:scale-95 transition-all text-sm md:text-base"
               >
                 Ordina su Deliveroo
               </a>
             </div>
 
-            <div className="bg-sfoglia-accent/20 backdrop-blur-md rounded-2xl p-8 border border-white/10">
+            <div className="bg-sfoglia-accent/20 backdrop-blur-md rounded-2xl p-6 md:p-8 border border-white/10">
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 bg-sfoglia-accent rounded-full flex items-center justify-center">
-                  <Phone className="text-sfoglia-wood" size={24} />
+                <div className="w-10 h-10 md:w-12 md:h-12 bg-sfoglia-accent rounded-full flex items-center justify-center shrink-0">
+                  <Phone className="text-sfoglia-wood w-5 h-5 md:w-6 md:h-6" size={24} />
                 </div>
                 <div>
-                  <h3 className="font-display text-xl font-bold">Prenotazioni e Ritiro</h3>
-                  <p className="text-sm text-white/60">Chiama in negozio</p>
+                  <h3 className="font-display text-lg md:text-xl font-bold">Prenotazioni e Ritiro</h3>
+                  <p className="text-[10px] md:text-sm text-white/60">Chiama in negozio</p>
                 </div>
               </div>
-              <p className="font-sans text-white/80">
+              <p className="font-sans text-white/80 text-sm md:text-base">
                 Chiamaci al <span className="font-bold">{CONTACT_INFO.phone}</span> per prenotare il tuo ritiro o riservare un tavolo.
               </p>
             </div>
 
             <div className="bg-white/5 backdrop-blur-md rounded-2xl overflow-hidden border border-white/10 group">
-              <div className="p-8 pb-4">
+              <div className="p-6 md:p-8 pb-4">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-sfoglia-blue rounded-full flex items-center justify-center">
-                    <MapPin className="text-sfoglia-wood" size={24} />
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-sfoglia-blue rounded-full flex items-center justify-center shrink-0">
+                    <MapPin className="text-sfoglia-wood w-5 h-5 md:w-6 md:h-6" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-display text-xl font-bold">Posizione</h3>
-                    <p className="text-sm text-white/60">{CONTACT_INFO.address}</p>
+                    <h3 className="font-display text-lg md:text-xl font-bold">Posizione</h3>
+                    <p className="text-[10px] md:text-sm text-white/60">{CONTACT_INFO.address}</p>
                   </div>
                 </div>
                 <p className="font-sans text-white/80 text-sm">
@@ -136,7 +136,7 @@ const OpeningHoursSection: React.FC = () => {
               </div>
               
               {/* Mini Mappa Google */}
-              <div className="h-48 w-full relative">
+              <div className="h-40 md:h-48 w-full relative">
                 <iframe 
                   src={CONTACT_INFO.mapsEmbed}
                   className="w-full h-full border-0 grayscale contrast-125 opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700"
@@ -151,7 +151,7 @@ const OpeningHoursSection: React.FC = () => {
                   href={CONTACT_INFO.googleMaps}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-full py-3 bg-sfoglia-blue text-sfoglia-wood rounded-xl font-bold hover:scale-[1.02] transition-all shadow-soft"
+                  className="flex items-center justify-center gap-2 w-full py-3 bg-sfoglia-blue text-sfoglia-wood rounded-xl font-bold hover:scale-[1.02] active:scale-95 transition-all shadow-soft text-sm md:text-base"
                 >
                   <MapPin size={18} />
                   Ottieni Indicazioni
