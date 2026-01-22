@@ -30,7 +30,7 @@ const TigellaBooking: React.FC = () => {
                 transition: { duration: 0.4, ease: "easeInOut" }
               }}
               className="absolute right-4 md:right-12 top-0 bottom-0 bg-white border-2 border-sfoglia-pink/30 rounded-2xl md:rounded-l-3xl md:rounded-r-none shadow-soft-xl overflow-hidden flex origin-right"
-              style={{ marginRight: '36px' }}
+              style={{ marginRight: '36px', width: 'calc(100vw - 100px)', maxWidth: '700px' }}
             >
                <m.div 
                  initial={{ opacity: 0, x: -20 }}

@@ -5,8 +5,8 @@ import { OPENING_HOURS, CONTACT_INFO } from '../constants';
 
 const OpeningHoursSection: React.FC = () => {
   return (
-    <section id="bistrot" className="py-20 bg-sfoglia-wood text-sfoglia-cream overflow-hidden scroll-mt-20">
-      <div className="max-w-6xl mx-auto px-4">
+    <section id="bistrot" className="py-20 bg-sfoglia-wood text-sfoglia-cream overflow-hidden scroll-mt-20 w-full">
+      <div className="max-w-6xl mx-auto px-4 overflow-hidden">
         <div className="text-center mb-16">
           <m.h2 
             initial={{ opacity: 0, y: 20 }}

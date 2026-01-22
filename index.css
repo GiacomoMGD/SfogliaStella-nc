@@ -18,15 +18,13 @@
 }
 
 /* Smooth Scrolling */
-html {
+html, body {
   scroll-behavior: smooth;
-  overflow-x: hidden;
-}
-
-body {
   overflow-x: hidden;
   width: 100%;
   position: relative;
+  margin: 0;
+  padding: 0;
 }
 
 /* Soft text shadows */

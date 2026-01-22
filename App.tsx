@@ -15,7 +15,7 @@ const TigellaBooking = lazy(() => import('./components/TigellaBooking'));
 const App: React.FC = () => {
   return (
     <LazyMotion features={domAnimation}>
-      <div className="bg-sfoglia-cream min-h-screen flat-bg">
+      <div className="bg-sfoglia-cream min-h-screen flat-bg overflow-x-hidden">
         <Navbar />
         
         <main>

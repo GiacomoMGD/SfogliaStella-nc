@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
   return (
     <section className="relative h-screen w-full overflow-hidden flat-bg">
       {/* Background Image - Flat illustration style */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 overflow-hidden">
         <m.img
           initial={{ scale: 1.1, opacity: 0 }}
           animate={{ scale: 1, opacity: 0.25 }}

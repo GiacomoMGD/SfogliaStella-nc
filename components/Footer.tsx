@@ -4,10 +4,10 @@ import { CONTACT_INFO, NAV_ITEMS } from '../constants';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-sfoglia-cream text-sfoglia-wood pt-24 pb-12 border-t border-sfoglia-pink/20 relative overflow-hidden">
+    <footer className="bg-sfoglia-cream text-sfoglia-wood pt-24 pb-12 border-t border-sfoglia-pink/20 relative overflow-hidden w-full">
       {/* Background Decorations */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-sfoglia-pink/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-sfoglia-blue/5 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
+      <div className="absolute top-0 right-0 w-64 md:w-96 h-64 md:h-96 bg-sfoglia-pink/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-64 md:w-96 h-64 md:h-96 bg-sfoglia-blue/5 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
