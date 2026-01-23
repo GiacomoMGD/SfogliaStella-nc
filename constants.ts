@@ -15,43 +15,43 @@ export const HERO_TEXT = {
 export const PRODUCTS: Product[] = [
   {
     id: "1",
-    name: "Tortelloni Verdi",
-    description: "Sfoglia verde tirata al mattarello con un ricco ripieno di spinaci freschi, ricotta cremosa e parmigiano reggiano.",
-    image: "/images/products/img_tortelli_verdi.jpg",
+    name: "Tortellini in brodo",
+    description: "Piccoli scrigni fatti a mano, serviti nel nostro brodo di carne tradizionale secondo l'antica ricetta bolognese.",
+    image: "/images/products/img_tortelloni.jpg",
     tag: "Tradizione"
   },
   {
     id: "2",
-    name: "Sformato di Verdure",
-    description: "Un cuore morbido di verdure di stagione servito su un letto di misticanza fresca e guarnito con scaglie di parmigiano.",
-    image: "/images/products/img_insalata.jpg",
-    tag: "Antipasti"
-  },
-  {
-    id: "3",
-    name: "Balanzoni Gorgonzola e Noci",
-    description: "Tortelloni verdi ripieni di mortadella e ricotta, serviti con una vellutata al gorgonzola e noci croccanti.",
+    name: "Balanzoni Gorgonzola e noci",
+    description: "Sfoglia verde con ripieno di mortadella e ricotta, serviti con una vellutata al gorgonzola e granella di noci.",
     image: "/images/products/img_balanzone.png",
     tag: "Specialità"
   },
   {
+    id: "3",
+    name: "Tagliatelle al ragù bolognese",
+    description: "La nostra pasta all'uovo ruvida e porosa, condita con il ragù della casa a cottura lenta.",
+    image: "/images/experience/img_pasta_fresca.png",
+    tag: "Classico"
+  },
+  {
     id: "4",
-    name: "Pici Cacio e Pepe",
-    description: "Pasta fresca fatta a mano secondo la tradizione toscana, condita con pecorino romano DOP e pepe nero tostato.",
-    image: "/images/products/img_cacioepepe.jpg",
-    tag: "I Primi"
+    name: "Cotoletta alla bolognese",
+    description: "La regina della tavola: fritta, passata in brodo e ricoperta di prosciutto crudo e parmigiano.",
+    image: "/images/products/img_tortelli_verdi.jpg",
+    tag: "Secondi"
   },
   {
     id: "5",
-    name: "Tagliatelle Fresche",
-    description: "La vera pasta all'uovo bolognese, ruvida e porosa, ideale per accogliere ogni tipo di condimento tradizionale.",
-    image: "/images/experience/img_pasta_fresca.png",
-    tag: "Pasta Fresca"
+    name: "Lasagna alla bolognese",
+    description: "Sette strati di sfoglia verde, ragù tradizionale e besciamella, gratinati per una crosticina perfetta.",
+    image: "/images/products/img_tortelli_verdi.jpg",
+    tag: "Al Forno"
   },
   {
     id: "6",
-    name: "Tortelloni Ricotta e Prezzemolo",
-    description: "Il sapore delicato della tradizione: tortelloni fatti a mano con ripieno di ricotta fresca e profumato prezzemolo.",
+    name: "Tortelloni Ricotta e prezzemolo",
+    description: "Pasta fatta a mano con ripieno delicato, serviti con burro e salvia o pomodoro fresco.",
     image: "/images/products/img_tortelloni.jpg",
     tag: "I Primi"
   }

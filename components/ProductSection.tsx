@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { m, AnimatePresence } from 'framer-motion';
 import { PRODUCTS } from '../constants';
-import { Info, X } from 'lucide-react';
+import { Info, X, BookOpen } from 'lucide-react';
+import FullMenuModal from './FullMenuModal';
 
 const ProductSection: React.FC = () => {
   const [selectedProduct, setSelectedProduct] = useState<typeof PRODUCTS[0] | null>(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <section id="prodotto" className="py-24 bg-[#FDFBF7] scroll-mt-20">
@@ -16,7 +18,7 @@ const ProductSection: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {PRODUCTS.map((product, index) => (
             <m.div
               key={product.id}
@@ -63,6 +65,22 @@ const ProductSection: React.FC = () => {
             </m.div>
           ))}
         </div>
+
+        {/* Full Menu Button */}
+        <m.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="flex justify-center"
+        >
+          <button 
+            onClick={() => setIsMenuOpen(true)}
+            className="group flex items-center gap-4 bg-sfoglia-accent text-white px-10 py-5 rounded-3xl font-display font-bold text-xl hover:bg-sfoglia-wood hover:scale-105 active:scale-95 transition-all shadow-soft-lg"
+          >
+            <BookOpen size={28} className="group-hover:rotate-12 transition-transform" />
+            CONSULTA IL MENÙ COMPLETO
+          </button>
+        </m.div>
       </div>
 
       {/* Product Detail Modal */}
@@ -142,6 +160,8 @@ const ProductSection: React.FC = () => {
           </div>
         )}
       </AnimatePresence>
+
+      <FullMenuModal isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
     </section>
   );
 };
