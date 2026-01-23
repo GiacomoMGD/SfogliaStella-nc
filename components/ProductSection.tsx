@@ -82,9 +82,9 @@ const ProductSection: React.FC = () => {
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              className="bg-sfoglia-cream w-full max-w-4xl rounded-[2rem] md:rounded-[3rem] shadow-soft-xl relative z-10 overflow-hidden border-4 border-sfoglia-pink/30 flex flex-col md:flex-row max-h-[90vh] md:max-h-none overflow-y-auto md:overflow-visible"
+              className="bg-sfoglia-cream w-full max-w-4xl rounded-[2rem] md:rounded-[3rem] shadow-soft-xl relative z-10 overflow-hidden border-4 border-sfoglia-pink/30 flex flex-col md:flex-row max-h-[90vh] overflow-y-auto"
             >
-              <div className="w-full md:w-1/2 aspect-[4/3] md:aspect-auto sticky top-0 md:relative z-20">
+              <div className="w-full md:w-1/2 aspect-[4/3] md:aspect-auto relative z-20 overflow-hidden">
                 <img 
                   src={selectedProduct.image} 
                   alt={selectedProduct.name} 

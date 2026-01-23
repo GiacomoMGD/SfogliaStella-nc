@@ -4,7 +4,7 @@ import { m } from 'framer-motion';
 const AboutSection: React.FC = () => {
   return (
     <section id="chi-siamo" className="py-24 px-4 bg-sfoglia-cream text-sfoglia-wood relative flat-bg overlay-soft illustration-element">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
         
         {/* Content */}
         <div className="space-y-8 order-2 md:order-1">

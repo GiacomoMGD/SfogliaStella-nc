@@ -30,13 +30,17 @@ const TigellaBooking: React.FC = () => {
                 transition: { duration: 0.4, ease: "easeInOut" }
               }}
               className="absolute right-4 md:right-12 top-0 bottom-0 bg-white border-2 border-sfoglia-pink/30 rounded-2xl md:rounded-l-3xl md:rounded-r-none shadow-soft-xl overflow-hidden flex origin-right"
-              style={{ marginRight: '36px', width: 'calc(100vw - 100px)', maxWidth: '700px' }}
+              style={{ 
+                marginRight: '48px', 
+                width: 'calc(100vw - 80px)', 
+                maxWidth: '650px' 
+              }}
             >
                <m.div 
                  initial={{ opacity: 0, x: -20 }}
                  animate={{ opacity: 1, x: 0 }}
                  transition={{ delay: 0.3 }}
-                 className="flex-1 flex flex-col md:flex-row items-center justify-between px-3 md:px-10 min-w-[240px] xs:min-w-[280px] md:min-w-[700px] py-3 md:py-0"
+                 className="flex-1 flex flex-col md:flex-row items-center justify-between px-4 md:px-10 min-w-[200px] md:min-w-[600px] py-2 md:py-0"
                >
                  <div className="flex flex-col shrink-0 items-center md:items-start mb-3 md:mb-0">
                    <h3 className="font-display text-base md:text-xl font-bold text-sfoglia-wood leading-none">Prenota Online</h3>

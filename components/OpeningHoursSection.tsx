@@ -30,7 +30,7 @@ const OpeningHoursSection: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="space-y-6 md:space-y-8"
           >
-            <div className="card-flat p-6 md:p-8 bg-white/5 border-white/10 backdrop-blur-md rounded-2xl md:rounded-3xl">
+            <div className="card-flat p-6 md:p-8 bg-white/[0.03] border-white/5 backdrop-blur-md rounded-2xl md:rounded-3xl overflow-hidden">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-10 h-10 md:w-12 md:h-12 bg-sfoglia-yellow rounded-full flex items-center justify-center shrink-0">
                   <Clock className="text-sfoglia-wood w-5 h-5 md:w-6 md:h-6" size={24} />
@@ -40,7 +40,7 @@ const OpeningHoursSection: React.FC = () => {
 
               <div className="space-y-2 font-sans">
                 {OPENING_HOURS.kitchen.map((item, idx) => (
-                  <div key={idx} className="flex justify-between items-center py-3 border-b border-white/20 last:border-0">
+                  <div key={idx} className="flex justify-between items-center py-3 border-b border-white/10 last:border-0">
                     <span className="font-bold text-white text-sm md:text-base">{item.day}</span>
                     <div className="text-right">
                       <div className="text-white font-bold text-sm md:text-base">{item.hours}</div>
@@ -51,7 +51,7 @@ const OpeningHoursSection: React.FC = () => {
               </div>
             </div>
 
-            <div className="card-flat p-6 md:p-8 bg-white/5 border-white/10 backdrop-blur-md rounded-2xl md:rounded-3xl">
+            <div className="card-flat p-6 md:p-8 bg-white/[0.03] border-white/5 backdrop-blur-md rounded-2xl md:rounded-3xl overflow-hidden">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-10 h-10 md:w-12 md:h-12 bg-sfoglia-accent rounded-full flex items-center justify-center shrink-0">
                   <MapPin className="text-sfoglia-wood w-5 h-5 md:w-6 md:h-6" size={24} />
@@ -61,7 +61,7 @@ const OpeningHoursSection: React.FC = () => {
 
               <div className="space-y-2 font-sans">
                 {OPENING_HOURS.shop.map((item, idx) => (
-                  <div key={idx} className="flex justify-between items-center py-3 border-b border-white/10 last:border-0">
+                  <div key={idx} className="flex justify-between items-center py-3 border-b border-white/5 last:border-0">
                     <span className="font-medium text-sm md:text-base">{item.day}</span>
                     <div className="text-right">
                       <div className="text-white/90 text-sm md:text-base">{item.hours}</div>
@@ -81,7 +81,7 @@ const OpeningHoursSection: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="space-y-6"
           >
-            <div className="card-flat p-6 md:p-8 bg-white/5 border-white/10 backdrop-blur-md rounded-2xl md:rounded-3xl">
+            <div className="card-flat p-6 md:p-8 bg-white/[0.03] border-white/5 backdrop-blur-md rounded-2xl md:rounded-3xl overflow-hidden">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-10 h-10 md:w-12 md:h-12 bg-sfoglia-yellow rounded-full flex items-center justify-center shrink-0">
                   <Truck className="text-sfoglia-wood w-5 h-5 md:w-6 md:h-6" size={24} />
@@ -104,7 +104,7 @@ const OpeningHoursSection: React.FC = () => {
               </a>
             </div>
 
-            <div className="bg-sfoglia-accent/20 backdrop-blur-md rounded-2xl p-6 md:p-8 border border-white/10">
+            <div className="bg-sfoglia-accent/10 backdrop-blur-md rounded-2xl p-6 md:p-8 border border-white/5 overflow-hidden">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-10 h-10 md:w-12 md:h-12 bg-sfoglia-accent rounded-full flex items-center justify-center shrink-0">
                   <Phone className="text-sfoglia-wood w-5 h-5 md:w-6 md:h-6" size={24} />
@@ -119,7 +119,7 @@ const OpeningHoursSection: React.FC = () => {
               </p>
             </div>
 
-            <div className="bg-white/5 backdrop-blur-md rounded-2xl overflow-hidden border border-white/10 group">
+            <div className="bg-white/[0.03] backdrop-blur-md rounded-2xl overflow-hidden border border-white/5 group">
               <div className="p-6 md:p-8 pb-4">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-10 h-10 md:w-12 md:h-12 bg-sfoglia-blue rounded-full flex items-center justify-center shrink-0">

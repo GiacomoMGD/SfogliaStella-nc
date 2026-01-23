@@ -73,7 +73,7 @@ const Navbar: React.FC = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ type: 'spring', damping: 30, stiffness: 300 }}
-            className="fixed inset-0 bg-sfoglia-cream z-[70] md:hidden flex flex-col p-6"
+            className="fixed inset-0 bg-sfoglia-cream z-[200] md:hidden flex flex-col p-6"
           >
             <div className="flex justify-between items-center mb-12">
               <div className="font-display text-2xl font-bold">
